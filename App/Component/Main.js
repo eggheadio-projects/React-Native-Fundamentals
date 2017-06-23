@@ -86,7 +86,7 @@ export default class Main extends Component {
           this.props.navigator.push({
             component: Dashboard,
             title: res.name || 'Select an Option',
-            passProps: { userInfor: res }
+            passProps: { userInfo: res }
           });
           // reset state
           this.setState({
