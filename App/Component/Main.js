@@ -10,7 +10,7 @@ import {
 import { api } from '../Utils/api';
 import Dashboard from './Dashboard';
 
-export var styles = StyleSheet.create({
+var styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
         padding: 30,
