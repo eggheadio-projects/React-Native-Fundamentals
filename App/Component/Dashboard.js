@@ -55,7 +55,7 @@ export default class Dashboard extends Component {
     api.getRepos(this.props.userInfo.login)
       .then((res) => {
         this.props.navigator.push({
-          title: 'Repositories Page',
+          title: 'Repos',
           component: Repositories,
           passProps: { userInfo: this.props.userInfo, repos: res }
         });
