@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 import Badge from './Badge';
+import Separator from './Helpers/Separator';
 
 var styles = StyleSheet.create({
   container: {
@@ -43,9 +44,12 @@ export default class Profile extends Component {
         return <View key={index} />
       } else {
         return (
-          <View key={index} style={styles.rowContainer}>
-            <Text style={styles.rowTitle}> {this.getRowTitle(item)} </Text>
-            <Text style={styles.rowContent}> {userInfo[item]} </Text>
+          <View key={index}>
+            <View style={styles.rowContainer}>
+              <Text style={styles.rowTitle}> {this.getRowTitle(item)} </Text>
+              <Text style={styles.rowContent}> {userInfo[item]} </Text>
+            </View>
+            <Separator />
           </View>
         )
       }
