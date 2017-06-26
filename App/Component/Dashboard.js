@@ -7,6 +7,8 @@ import {
   TouchableHighlight
 } from 'react-native';
 import Profile from './Profile';
+import Repositories from './Repositories';
+import { api } from '../Utils/api';
 
 var styles = StyleSheet.create({
   container: {
@@ -47,11 +49,20 @@ export default class Dashboard extends Component {
     this.props.navigator.push({
       title: 'Profile Page',
       component: Profile,
-      passProps: {userInfo: this.props.userInfo}
+      passProps: { userInfo: this.props.userInfo }
     });
   }
   goToRepos() {
     console.log('Go to repos');
+    api.getRepos(this.props.userInfo.login)
+      .then((res) => {
+        console.log(res);
+        this.props.navigator.push({
+          title: 'Repositories Page',
+          component: Repositories,
+          passProps: { userInfo: this.props.userInfo, repos: res }
+        });
+      });
   }
   goToNotes() {
     console.log('Go to notes');
