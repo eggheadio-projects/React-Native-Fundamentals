@@ -9,6 +9,7 @@ import {
 import PropTypes from 'prop-types';
 import Badge from './Badge';
 import Separator from './Helpers/Separator';
+import RepoView from './Helpers/RepoView';
 
 var styles = StyleSheet.create({
   container: {
@@ -37,7 +38,11 @@ var styles = StyleSheet.create({
 
 export default class Repositories extends Component {
   openPage(url) {
-    console.log('open url', url);
+    this.props.navigator.push({
+      title: 'Web View',
+      component: RepoView,
+      passProps: { url }
+    });
   }
   render() {
     var repos = this.props.repos;
