@@ -45,7 +45,6 @@ export default class Dashboard extends Component {
     return obj;
   }
   goToProfile() {
-    console.log('Go to profile');
     this.props.navigator.push({
       title: 'Profile Page',
       component: Profile,
@@ -53,10 +52,8 @@ export default class Dashboard extends Component {
     });
   }
   goToRepos() {
-    console.log('Go to repos');
     api.getRepos(this.props.userInfo.login)
       .then((res) => {
-        console.log(res);
         this.props.navigator.push({
           title: 'Repositories Page',
           component: Repositories,
