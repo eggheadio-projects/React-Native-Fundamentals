@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import Profile from './Profile';
 import Repositories from './Repositories';
+import Notes from './Notes';
 import { api } from '../Utils/api';
 
 var styles = StyleSheet.create({
@@ -62,7 +63,15 @@ export default class Dashboard extends Component {
       });
   }
   goToNotes() {
-    console.log('Go to notes');
+    api.getNotes(this.props.userInfo.login)
+      .then((res) => {
+        res = res || {};
+        this.props.navigator.push({
+          title: 'Notes',
+          component: Notes,
+          passProps: { userInfo: this.props.userInfo, notes: res }
+        });
+      });
   }
   render() {
     return (
