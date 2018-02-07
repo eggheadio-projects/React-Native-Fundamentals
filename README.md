@@ -4,6 +4,7 @@
 
 Course follows React Native Fundamentals course on Egghead.io by TylerMcGinnis.
 
+
 # Get Started
 
 ## Global Installs
