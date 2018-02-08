@@ -9,6 +9,8 @@ Course follows React Native Fundamentals course on Egghead.io by TylerMcGinnis.
 ## Global Installs
 Install Xcode
 
+*(If you've already installed node, skip these steps and go to Project Installs. Reinstalling node can create errors.)
+
 Install Homebrew [here](https://brew.sh/)
 
 ```bash
