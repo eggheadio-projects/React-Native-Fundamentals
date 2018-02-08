@@ -11,12 +11,12 @@ export var api = {
   },
   getNotes(username) {
     username = username.toLowerCase().trim();
-    var url = `https://github-notetaker-d5642.firebaseio.com/${username}.json`;
+    var url = `https://github-saver.firebaseio.com/${username}.json`;
     return fetch(url).then((res) => res.json());
   },
   addNote(username, note) {
     username = username.toLowerCase().trim();
-    var url = `https://github-notetaker-d5642.firebaseio.com/${username}.json`;
+    var url = `https://github-saver.firebaseio.com/${username}.json`;
     return fetch(url, {
       method: 'post',
       body: JSON.stringify(note)
