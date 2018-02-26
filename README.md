@@ -1,18 +1,17 @@
 # Github Notetaker
 
-### Example iOS application made using the github api on React Native 0.44.
+### Example iOS application made using the github api on React Native 0.44.2
 
 Course follows React Native Fundamentals course on Egghead.io by TylerMcGinnis.
-# Github Notetaker
 
-### Example iOS application made using the github api on React Native 0.44.
-
-Course follows React Native Fundamentals course on Egghead.io by TylerMcGinnis.
 
 # Get Started
 
 ## Global Installs
 Install Xcode
+
+*(If you've already installed node, skip these steps and go to Project Installs. Reinstalling node can create errors.)
+
 
 Install Homebrew [here](https://brew.sh/)
 
@@ -31,5 +30,6 @@ $ npm start
 Open Xcode
 
 Open project from: `/githubNotetaker/ios`
+
 
 Build Project
