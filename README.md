@@ -30,3 +30,6 @@ Open Xcode
 Open project from: `/githubNotetaker/ios`
 
 Build Project
+*(Upgrading past 0.46 in React Native throws errors in Xcode build. Build Phase pathing must be updated for each branch as addressed here: https://github.com/facebook/react-native/issues/14935)
+
+
